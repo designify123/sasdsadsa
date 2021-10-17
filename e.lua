@@ -87,8 +87,12 @@ end
             end)
         end
          if msg == "/e getver" then 
-                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("The current version of script is v2.0.1 Set-Beta", "All")
-           end
+            ame:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("The current version of script is v2.0.1 Set-Beta", "All")
+         end
+         if msg == "/e lgbt" then
+             e:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am 100% LGBT-Q, and my pronouns are: She/Trans", "All")
+         --  I am 100% LGBT-Q, and my pronouns are: She/Trans
+         end
     end)
 end
 function start()
