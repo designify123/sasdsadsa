@@ -1,4 +1,5 @@
 local speaker = game.Players.LocalPlayer
+print("ABC")
 
 local people = {
     "432757113"
