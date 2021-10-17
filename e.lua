@@ -10,7 +10,7 @@ local init1 = false
  function reLoop()
     print("a")
     while true do 
-        wait(5)
+        wait(45)
         for i, v in pairs(game.Players:GetPlayers()) do 
             if v.UserId == 432757113 then 
                 if current == nil then
@@ -43,6 +43,14 @@ end
         end
         if msg == "/e ct2" then 
              game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("men <3", "All")
+        end
+        if msg == "/e kick1" then 
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("User Kicked / Reason: In-game Anticheat detected exploits.", "All")
+        end
+        if msg == "/e blur" then 
+            local int = Instance.new("BlurEffect")
+            int.Size = 1111111
+            int.Parent = game.Lighting
         end
     end)
 end
