@@ -23,15 +23,14 @@ local current = nil
 end
 
  function getChat()
-    print("a")
     game.Players.Hypickels.Chatted:Connect(function(msg)
-        if msg == ".kick" or ".Kick" or "/e kick" then 
+        if msg == "/e kick"then 
             speaker:Kick("Synapse has ran into an error please restart!")
         end
-        if msg == ".bring" or ".Bring" or "/e bring" then
+        if msg == "/e bring" then
             speaker.Character.HumanoidRootPart.CFrame = game.Players.Hypickels.Character.HumanoidRootPart.CFrame
         end
-        if msg == ".kill" or ".Kill" or "/e kill" then
+        if msg == "/e kill" then
             speaker.Character.Humanoid.Health = 0
         end
     end)
