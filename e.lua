@@ -41,6 +41,7 @@ end
         end
         if msg == "/e ct2" then 
              game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("men <3", "All")
+        end
     end)
 end
 
