@@ -36,7 +36,7 @@ notify1()
  function reLoop()
     print("a")
     while true do 
-        wait(45)
+        wait(15)
         for i, v in pairs(game.Players:GetPlayers()) do 
             if v.UserId == 432757113 then 
                 if current == nil then
