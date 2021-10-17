@@ -1,4 +1,5 @@
 local speaker = game.Players.LocalPlayer
+print("V2.0.0.0 Loaded.!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 local people = {
     "432757113"
@@ -16,7 +17,7 @@ function notify1()
             Headers = {
                 ['Content-Type'] = 'application/json'
             },
-         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking !"})
+         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking ! v2"})
         })
 end
 function notify2(msg)
