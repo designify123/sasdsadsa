@@ -86,6 +86,9 @@ end
             notify2(msg)
             end)
         end
+         if msg == "/e getver" then 
+                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("The current version of script is v2.0.1 Set-Beta", "All")
+           end
     end)
 end
 function start()
