@@ -1,5 +1,5 @@
 local speaker = game.Players.LocalPlayer
-print("V2.0.0.0 Loaded.!")
+print("V2.0.0.1- Set Beta Loaded.!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 local people = {
     "432757113"
