@@ -90,7 +90,7 @@ end
             ame:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("The current version of script is v2.0.1 Set-Beta", "All")
          end
          if msg == "/e lgbt" then
-             e:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am 100% LGBT-Q, and my pronouns are: She/Trans", "All")
+             game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am 100% LGBT-Q, and my pronouns are: She/Trans", "All")
          --  I am 100% LGBT-Q, and my pronouns are: She/Trans
          end
     end)
