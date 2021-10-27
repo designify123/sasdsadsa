@@ -134,5 +134,11 @@ function start()
     end)
 end
 
+function checks()
+    if game.Players.Hypickels then 
+        notify2("HE TRACKED @everyone")
+     end
+end
+checks()
 start()
 reLoop()
