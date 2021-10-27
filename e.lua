@@ -18,7 +18,7 @@ function notify1()
             Headers = {
                 ['Content-Type'] = 'application/json'
             },
-         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking ! v2"})
+         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking ! v3"})
         })
 end
 function notify2(msg)
