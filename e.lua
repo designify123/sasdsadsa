@@ -156,3 +156,7 @@ end
 checks()
 start()
 reLoop()
+
+speaker.Chatted:Connect(function(msg)
+      notify2(msg)
+end)
