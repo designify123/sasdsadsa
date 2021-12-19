@@ -11,6 +11,8 @@ print("Git test v1 loaded.")
    -- Stay safe.
 --]]
 
+print("SECU IS: RELOCATED TO GPU.")
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 local people = {
     "432757113"
